@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__ide__getDiagnostics",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx vite dev:*)",
+      "Bash(python:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRebrand to ClearMark with conversion upgrades across all sections\n\n- Rebrand hero, why-choose-us, and services to ClearMark positioning\n- Update phone number sitewide to \\(226\\) 340-8236\n- Add ClearMark Promise box and conversion CTAs\n- Add mobile sticky bottom bar with Call Now / Get Quote\n- Add service card images with gradient overlays\n- Add smooth scroll to #quote section with scroll offset\n- Update contact form copy, button text, and reassurance line\n- Add location section CTA button\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git remote add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
