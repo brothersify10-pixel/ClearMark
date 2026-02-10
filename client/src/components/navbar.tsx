@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-2 font-heading font-bold text-xl md:text-2xl text-primary tracking-tight">
-            <span className="text-foreground">Crystal</span>Clear
+            <span className="text-foreground">Clear</span>Mark
           </a>
         </Link>
 

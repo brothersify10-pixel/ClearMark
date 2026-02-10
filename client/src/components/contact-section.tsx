@@ -73,7 +73,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">hello@crystalclearwindows.ca</p>
+                    <p className="text-muted-foreground">hello@clearmark.ca</p>
                   </div>
                 </CardContent>
               </Card>

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="font-heading text-2xl font-bold mb-4 text-white">
-              Crystal<span className="text-primary">Clear</span>
+              Clear<span className="text-primary">Mark</span>
             </h3>
             <p className="text-muted-foreground max-w-sm">
               Professional window cleaning, gutter cleaning, and pressure washing services for residential and commercial properties in Ontario.
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/10 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Crystal Clear Windows. All rights reserved.
+          © {new Date().getFullYear()} ClearMark Window Cleaning. All rights reserved.
         </div>
       </div>
     </footer>
