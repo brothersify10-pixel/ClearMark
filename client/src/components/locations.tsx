@@ -23,7 +23,7 @@ export default function Locations() {
 
         <div className="flex flex-wrap justify-center gap-4">
           {areas.map((area) => (
-            <div 
+            <div
               key={area}
               className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full font-bold border border-white/20 hover:bg-white/20 transition-colors cursor-default"
             >
@@ -31,6 +31,15 @@ export default function Locations() {
               {area}
             </div>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <button
+            onClick={() => document.getElementById("quote")?.scrollIntoView({ behavior: "smooth" })}
+            className="w-full sm:w-auto px-8 py-3 bg-white text-primary font-bold rounded-lg shadow-md hover:shadow-lg hover:bg-white/90 transition-all text-center cursor-pointer"
+          >
+            Check Availability in Your Area
+          </button>
         </div>
       </div>
     </section>

@@ -40,7 +40,8 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-background scroll-mt-24">
+      <div id="quote" className="scroll-mt-24" />
       <div className="container px-4 mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
@@ -48,7 +49,7 @@ export default function ContactSection() {
               Get Your Free Quote
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Fill out the form and we'll get back to you within 24 hours with a customized estimate for your property.
+              Fill this out and we'll reply within 2 business hours with a clear, no-obligation estimate.
             </p>
 
             <div className="space-y-6">
@@ -59,7 +60,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <a href="tel:+12263408236" className="text-muted-foreground hover:text-primary transition-colors">(226) 340-8236</a>
                     <p className="text-sm text-muted-foreground">Mon-Fri: 8am - 6pm</p>
                   </div>
                 </CardContent>
@@ -104,7 +105,7 @@ export default function ContactSection() {
                         <FormItem>
                           <FormLabel>Phone</FormLabel>
                           <FormControl>
-                            <Input placeholder="(555) 123-4567" {...field} />
+                            <Input placeholder="(226) 340-8236" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -159,8 +160,11 @@ export default function ContactSection() {
                   />
 
                   <Button type="submit" size="lg" className="w-full font-bold text-lg h-12">
-                    Request Quote
+                    Get My Free Quote
                   </Button>
+                  <p className="text-xs text-muted-foreground text-center mt-2">
+                    No spam. No pressure. Just a quote.
+                  </p>
                 </form>
               </Form>
             </CardContent>

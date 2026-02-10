@@ -2,32 +2,41 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Sparkles, Home, Building2, Droplets, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+import imgResidential from "@/assets/services/residential-window-cleaning.jpg";
+import imgCommercial from "@/assets/services/commercial-window-cleaning.jpg";
+import imgGutter from "@/assets/services/gutter-cleaning.jpg";
+import imgPressure from "@/assets/services/pressure-washing.jpg";
+
 export default function Services() {
   const services = [
     {
       icon: <Home className="w-10 h-10 text-primary" />,
+      image: imgResidential,
       title: "Residential Window Cleaning",
       subtitle: "Homes & Condos",
-      description: "Interior and exterior cleaning for homes of all sizes. We treat your home with respect and leave your windows sparkling.",
+      description: "Interior & exterior window cleaning that leaves your home brighter, cleaner, and streak-free.",
       highlight: true
     },
     {
       icon: <Building2 className="w-10 h-10 text-primary" />,
+      image: imgCommercial,
       title: "Commercial Services",
       subtitle: "Storefronts & Offices",
-      description: "Reliable storefront and low-rise commercial window cleaning to keep your business looking professional."
+      description: "Reliable storefront and low-rise window cleaning that keeps your business looking professional."
     },
     {
       icon: <Droplets className="w-10 h-10 text-primary" />,
+      image: imgGutter,
       title: "Gutter Cleaning",
       subtitle: "Downspouts Included",
-      description: "Protect your home from water damage with our thorough gutter cleaning and downspout flushing services."
+      description: "Thorough gutter and downspout cleaning to prevent overflow and water damage."
     },
     {
       icon: <Sparkles className="w-10 h-10 text-primary" />,
+      image: imgPressure,
       title: "Pressure Washing",
       subtitle: "Driveways & Walkways",
-      description: "Revitalize your driveway, walkways, and siding with our high-pressure cleaning solutions."
+      description: "High-pressure cleaning to restore driveways, walkways, and siding."
     },
   ];
 
@@ -40,6 +49,9 @@ export default function Services() {
           </h2>
           <p className="text-muted-foreground text-lg">
             We bring the sparkle to your home or business with a full range of exterior cleaning services.
+          </p>
+          <p className="text-sm text-muted-foreground/70 mt-2">
+            Free estimates • No obligation • Transparent pricing
           </p>
         </div>
 
@@ -54,12 +66,28 @@ export default function Services() {
                   : "border-primary/10 hover:border-primary/30"
               )}
             >
+              <div className="relative h-24 w-full overflow-hidden rounded-t-xl">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-t-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/10" />
+              </div>
               <CardHeader className="pb-2">
                 <div className="mb-4 p-3 bg-primary/5 rounded-2xl w-fit group-hover:bg-primary/10 transition-colors">
                   {service.icon}
                 </div>
                 <div className="space-y-1">
-                  <CardTitle className="font-heading text-xl">{service.title}</CardTitle>
+                  <div className="flex items-center gap-2">
+                    <CardTitle className="font-heading text-xl">{service.title}</CardTitle>
+                    {service.highlight && (
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 whitespace-nowrap">
+                        ⭐ Most Popular
+                      </span>
+                    )}
+                  </div>
                   <p className="text-xs font-bold uppercase tracking-wider text-primary/70">{service.subtitle}</p>
                 </div>
               </CardHeader>
@@ -68,7 +96,7 @@ export default function Services() {
                   {service.description}
                 </CardDescription>
                 <a 
-                  href="#contact" 
+                  href="#quote" 
                   className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-bold text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors gap-2 group/btn"
                 >
                   Get Quote

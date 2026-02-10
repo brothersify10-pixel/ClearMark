@@ -39,9 +39,9 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+15551234567" className="flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary">
+          <a href="tel:+12263408236" className="flex items-center gap-2 text-sm font-bold text-foreground hover:text-primary">
             <Phone className="h-4 w-4" />
-            (555) 123-4567
+            (226) 340-8236
           </a>
           <Button className="font-bold shadow-md hover:shadow-lg transition-all" size="lg">
             Get a Quote
@@ -70,9 +70,9 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <a href="tel:+15551234567" className="flex items-center gap-2 font-bold py-2">
+          <a href="tel:+12263408236" className="flex items-center gap-2 font-bold py-2">
             <Phone className="h-5 w-5 text-primary" />
-            (555) 123-4567
+            (226) 340-8236
           </a>
           <Button className="w-full font-bold" size="lg">
             Get a Free Quote
